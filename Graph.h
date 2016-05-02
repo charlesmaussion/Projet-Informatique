@@ -4,6 +4,7 @@ PI INF 442 : Shortest Paths.
 */
 #ifndef GRAPH
 #define GRAPH
+//MODIFICATION
 
 // STL includes
 #include <iostream>
