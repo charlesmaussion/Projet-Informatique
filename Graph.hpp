@@ -16,11 +16,18 @@ using namespace std;
 template <typename TypeVertice, typename TypeArc>
 class Graph {
   public :
-    Graph();
+  list<TypeVertice*> graph;
+  int n;
+  int m;
+  int r;
+    
+    Graph(int n, int m, int r);
     ~Graph();
+    
+    
 
     // Retourne le nombre de Vertices du graphe.
-    int size() const;
+    int size();
 
 
     // Ajout d'un Arc.
@@ -32,8 +39,8 @@ class Graph {
 
     // Récupérer les Arcs du graphe, ou les Arcs d'un Vertice.
 
-    vector<TypeArc*> recupererArcs();
-    vector<TypeArc*> recupererArcs(TypeVertice* vertice);
+    list<TypeArc*> recupererArcs();
+    list<TypeArc*> recupererArcs(TypeVertice* vertice);
 
 
     // Récupérer les successeurs d'un Vertice.
@@ -50,5 +57,31 @@ class Graph {
     void retraitVertice(TypeVertice* vertice);
 
 };
+
+class TypeArc{
+public;
+int depart;
+int arrivee;
+int cout;
+int[] ressources;
+
+TypeArc();
+~TypeArc();
+
+
+
+};
+
+class TypeVertice{
+public;
+
+int id;
+int[] ressources;
+list<TypeVertice*> successeurs;
+
+TypeVertice();
+~TypeVertice();
+
+}
 
 #endif
